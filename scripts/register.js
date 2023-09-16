@@ -3,7 +3,7 @@ $(document).ready(function() {
     $("#registrationForm").submit(function(event) {
         event.preventDefault(); // Prevent the default form submission
 
-        // Get values from the form
+        // Values entered into the form
         var email = $("#email").val();
         var password = $("#password").val();
         var firstName = $("#firstName").val();
@@ -13,7 +13,7 @@ $(document).ready(function() {
         var grade102 = $("#grade102").val();
         var grade103 = $("#grade103").val();
 
-        // Create a User object using Object Constructor technique
+        // Create a User object using Object contructor
         function User(email, password, firstName, lastName, age, grade101, grade102, grade103) {
             this.email = email;
             this.password = password;
@@ -26,6 +26,11 @@ $(document).ready(function() {
                 "Grade 103": grade103
             };
         }
+        // Create a new User object using
+        var newUser = new User(email, firstName, lastName, age, grade101, grade102, grade103);
+        //console log for the user object
+        console.log(newUser);
+
         // Clear the form after registration
         $("#registrationForm")[0].reset();
     });
