@@ -8,7 +8,7 @@ function User(e,p,f,l,a,g101,g102,g103){
     this.g2=g102;
     this.g3=g103;
 };
-//validation
+//validation function homework
 function isValid(User){
     let validation=true;
     inputEmail.classList.remove("alert-error");
@@ -19,8 +19,6 @@ function isValid(User){
     inputG101.classList.remove("alert-error");
     inputG102.classList.remove("alert-error");
     inputG103.classList.remove("alert-error");
-
-
     return validation;
 }
 
