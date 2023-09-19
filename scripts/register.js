@@ -1,37 +1,45 @@
-$(document).ready(function() {
-    // Event listener for form submission
-    $("#registrationForm").submit(function(event) {
-        event.preventDefault(); // Prevent the default form submission
+function User(e,p,f,l,a,g101,g102,g103){
+    this.email=e;
+    this.password=p;
+    this.firstName=f;
+    this.lastName=l;
+    this.age=a;
+    this.g1=g101;
+    this.g2=g102;
+    this.g3=g103;
+};
+//validation
+function isValid(User){
+    let validation=true;
+    inputEmail.classList.remove("alert-error");
+    inputPassword.classList.remove("alert-error");
+    inputFirstName.classList.remove("alert-error");
+    inputLastName.classList.remove("alert-error");
+    inputAge.classList.remove("alert-error");
+    inputG101.classList.remove("alert-error");
+    inputG102.classList.remove("alert-error");
+    inputG103.classList.remove("alert-error");
 
-        // Values entered into the form
-        var email = $("#email").val();
-        var password = $("#password").val();
-        var firstName = $("#firstName").val();
-        var lastName = $("#lastName").val();
-        var age = $("#age").val();
-        var grade101 = $("#grade101").val();
-        var grade102 = $("#grade102").val();
-        var grade103 = $("#grade103").val();
 
-        // Create a User object using Object contructor
-        function User(email, password, firstName, lastName, age, grade101, grade102, grade103) {
-            this.email = email;
-            this.password = password;
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.age = age;
-            this.grades = {
-                "Grade 101": grade101,
-                "Grade 102": grade102,
-                "Grade 103": grade103
-            };
-        }
-        // Create a new User object using
-        var newUser = new User(email, firstName, lastName, age, grade101, grade102, grade103);
-        //console log for the user object
-        console.log(newUser);
+    return validation;
+}
 
-        // Clear the form after registration
-        $("#registrationForm")[0].reset();
-    });
-});
+function register(){
+    let inputEmail=$(`#txtEmail`).val();
+    let inputPassword=$(`#txtPassword`).val();
+    let inputFirstName=$(`#txtFirstName`).val();
+    let inputLastName=$(`#txtLastName`).val();
+    let inputAge=$(`#txtAge`).val();
+    let inputG101=$(`#txtG101`).val();
+    let inputG102=$(`#txtG102`).val();
+    let inputG103=$(`#txtG103`).val();
+    console.log("Registering...");
+    let user = new User(inputEmail,inputPassword,inputFirstName,inputLastName,inputAge,inputG101,inputG102,inputG103);
+    console.log(user);
+}
+
+function init(){
+    $(`#btn-Register`).click(register);
+}
+
+window.onload = init;
