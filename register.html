@@ -7,62 +7,55 @@
     <title>Document</title>
 </head>
 <body>
+
     <header>
         <h1> Registration System</h1>
     </header>
-    <main>
-    <form id="registrationForm">
-        <div class="mb-3">
-            <label class="form-label" for="email">Email:</label>
-            <input class="form-control" type="email" name="email" id="txtEmail" required>
-        </div>
-        <br>
+    <main class="container">
         <div>
-            <label class="form-label" for="password">Password:</label>
-            <input class="form-control" type="password" name="password" id="txtPassword" required>
+            <div class="mb-3">
+                <label for="" class="form-label">Email:</label>
+                <input type="email"class="form-control" id="txtEmail">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Password:</label>
+                <input type="password"class="form-control" id="txtPass">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">First Name:</label>
+                <input type="text"class="form-control" id="txtfName">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Last Name:</label>
+                <input type="text"class="form-control" id="txtlname">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Age:</label>
+                <input type="number"class="form-control" id="txtAge">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">FSDI 101:</label>
+                <input type="number"class="form-control" id="txt101">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">FSDI 102:</label>
+                <input type="number"class="form-control" id="txt102">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">FSDI 103:</label>
+                <input type="number"class="form-control" id="txt103">
+            </div>
         </div>
-        <br>
         <div>
-            <label class="form-label" for="firstName">First Name:</label>
-            <input class="form-control" type="text" name="firstName" id="txtFirstName">
+            <button class="btn btn-primary" id="registerBtn">Register</button>
         </div>
-        <br>
-        <div>
-            <label class="form-label" for="lastName">Last Name:</label>
-            <input class="form-control" type="text" name="lastName" id="txtLastName">
-        </div>
-        <br>
-        <div>
-            <label class="form-label" for="age">Age:</label>
-            <input class="form-control" type="number" name="age" id="txtAge">
-        </div>
-        <br>
-        <div>
-            <label class="form-label" for="grade101">Grade 101:</label>
-            <input class="form-control" type="number" name="grade101" id="txtG101">
-        </div>
-        <br>
-        <div>
-            <label class="form-label" for="grade102">Grade 102:</label>
-            <input class="form-control" type="number" name="grade102" id="txtG102">
-        </div>
-        <br>
-        <div>
-            <label class="form-label" for="grade103">Grade 103:</label>
-            <input class="form-control" type="number" name="grade103" id="txtG103">
-        </div>
-        </form>
-        <br>
-        <div>
-            <button class="btn btn-primary" id="registerBtn" type="submit">Register</button>
-        </div>
-    
     </main>
 
     <footer>
 
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./scripts/register.js"></script>
+    <script src="./scripts/storeManager.js"></script>
+    <script src="./scripts/registration.js"></script>
 </body>
 </html>
